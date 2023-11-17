@@ -1,6 +1,6 @@
-import { NextResponse } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
-import type { Cat } from '../interfaces/Cat';
+import type { Cat } from '../../interfaces/Cat';
 
 const cats = [
   {
@@ -30,7 +30,7 @@ const cats = [
 ] as Array<Cat>;
 
 // To handle a GET request to /api
-export async function GET(request) {
+export async function GET(request: NextRequest) {
   // Do whatever you want
   return NextResponse.json({ cats }, { status: 200 });
 }
