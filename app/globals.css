@@ -4,17 +4,17 @@
 
 :root {
   --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 230, 230, 230;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
-}
+} */
 
 body {
   color: rgb(var(--foreground-rgb));
@@ -24,4 +24,55 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+h1, .h1 {
+  font-family: var(--font-open-sans);
+  font-size: 2rem;
+  font-weight: 200;
+  margin-bottom: 1rem;
+}
+
+h2, .h2 {
+  font-family: var(--font-open-sans);
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+h3, .h3 {
+  font-family: var(--font-open-sans);
+  font-size: 1.6rem;
+  font-weight: 200;
+}
+
+h4, .h4 {
+  font-family: var(--font-open-sans);
+  font-size: 1.4rem;
+  font-weight: 200;
+}
+
+h5, .h5 {
+  font-family: var(--font-open-sans);
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+h6, .h6 {
+  font-family: var(--font-open-sans);
+  font-size: 1rem;
+  font-weight: 200;
+}
+
+ul {
+  margin-bottom: 1rem;
+}
+
+.logo-font {
+  font-family: var(--font-thin-paws);
+  font-size: 3rem;
+  color: theme('colors.orange.600')
 }
