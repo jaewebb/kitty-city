@@ -1,0 +1,40 @@
+// schema.prisma
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+}
+
+model Cat {
+  id            String      @default(cuid()) @id
+  name          String
+  description   String
+  birthday      DateTime
+  gender        String
+  img           String?
+  favorited     Favorite[]
+  @@map(name: "cats")
+}
+
+model Favorite {
+  id            String      @default(cuid()) @id
+  cat           Cat?        @relation(fields: [catId], references: [id])
+  catId         String?
+  user          User?       @relation(fields: [userId], references: [id])
+  userId        String?
+  @@map(name: "favorites")
+}
+
+model User {
+  id            String      @default(cuid()) @id
+  firstName     String
+  lastName      String
+  username      String
+  favorites     Favorite[]
+  @@map(name: "users")
+}

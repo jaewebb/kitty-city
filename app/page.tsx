@@ -1,5 +1,6 @@
 'use client';
 
+import React from 'react';
 import useSWR from 'swr';
 
 import CatCard from './components/CatCard';
@@ -23,4 +24,4 @@ export default function Cats() {
       </div>
     </main>
   );
-}
+};

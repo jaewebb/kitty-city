@@ -1,38 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-import type { Cat } from '../../interfaces/Cat';
+import prisma from '@/lib/prisma';
 
-const cats = [
-  {
-    name: 'Pumpkin',
-    age: 'Adult',
-    sex: 'Male',
-    img: 'pumpkin.png'
-  },
-  {
-    name: 'Cheese',
-    age: 'Kitten',
-    sex: 'Male',
-    img: 'cheese.png'
-  },
-  {
-    name: 'Saydie',
-    age: 'Senior',
-    sex: 'Female',
-    img: 'saydie.png'
-  },
-  {
-    name: 'Geralt',
-    age: 'Adult',
-    sex: 'Male',
-    img: 'geralt.png'
-  }
-] as Array<Cat>;
-
-// To handle a GET request to /api
 export async function GET(request: NextRequest) {
-  // Do whatever you want
-  return NextResponse.json({ cats }, { status: 200 });
+  try {
+    const cats = await prisma.cat.findMany();
+    return NextResponse.json({ cats }, { status: 200 });
+  } catch (error) {
+    return NextResponse.json({ error }, { status: 500 });
+  }
 }
 
 // // To handle a POST request to /api

@@ -1,6 +1,7 @@
 export interface Cat {
   name: string,
-  age: string,
-  sex: string,
+  description: string,
+  birthday: Date,
+  gender: string,
   img: string
 };
