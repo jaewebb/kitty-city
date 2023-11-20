@@ -11,7 +11,11 @@ export default function Cats() {
   const { data, error, isLoading } = useSWR('/api/cats', fetcher);
 
   if (error) return <div>failed to load</div>;
-  if (isLoading) return <div>loading...</div>;
+  if (isLoading) return (
+    <main className="min-h-screen m-10">
+      loading...
+    </main>
+  );
 
   return (
     <main className="min-h-screen sm:m-10 m-5">
