@@ -20,25 +20,29 @@ function Birthday(birthday: Date) {
 
 export default function CatCard({ cat } : { cat: Cat }) {
   return (
-    <div className="drop-shadow-xl bg-white">
-      <div className="flex h-32 px-3 py-2">
-        <div>
-          <h2>{cat.name}</h2>
-          { Birthday(cat.birthday) }
-          <h4>{cat.gender}</h4>
+    <Link href={`cat/${cat.id}`}>
+      <div className="drop-shadow-xl bg-white max-w-md">
+        <div className="flex h-32 px-3 py-2">
+          <div>
+            <h2>{cat.name}</h2>
+            { Birthday(cat.birthday) }
+            <h4>{cat.gender}</h4>
+          </div>
+          <div className="grow text-right">
+            { Favorite(cat.name == 'Pumpkin') }
+          </div>
         </div>
-        <div className="grow text-right">
-          { Favorite(cat.name == 'Pumpkin') }
+        <div className="w-100 h-80 relative">
+          <Image
+            priority
+            alt={`photo of ${cat.name}`}
+            className="mx-auto"
+            fill={true}
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            src={`/images/${cat.img}`}
+          />
         </div>
       </div>
-      <div className="w-100 h-80 relative">
-        <Image
-          src={`/images/${cat.img}`}
-          className="mx-auto"
-          fill={true}
-          alt={`photo of ${cat.name}`}
-        />
-      </div>
-    </div>
+    </Link>
   );
 }

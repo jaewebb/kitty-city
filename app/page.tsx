@@ -1,6 +1,5 @@
 'use client';
 
-import React from 'react';
 import useSWR from 'swr';
 
 import CatCard from './components/CatCard';
@@ -15,9 +14,13 @@ export default function Cats() {
   if (isLoading) return <div>loading...</div>;
 
   return (
-    <main className="min-h-screen m-10">
+    <main className="min-h-screen sm:m-10 m-5">
       <h1>Adopt a Cat</h1>
-      <div className="grid grid-cols-4 gap-7">
+      <div className="
+        grid
+        xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1
+        xl:gap-7 gap-5
+      ">
           { data.cats.map((cat: Cat, i: number) => (
             <CatCard key={i} cat={cat} />
           )) }

@@ -15,8 +15,8 @@ export default function Header() {
         <Link href="/favorites" className="mr-5">
           Favorites
         </Link>
-        <Link href="/contact">
-          Contact
+        <Link href="/about">
+        About
         </Link>
       </nav>
     </header>
