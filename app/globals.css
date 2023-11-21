@@ -41,30 +41,35 @@ h2, .h2 {
   font-family: var(--font-open-sans);
   font-size: 1.8rem;
   font-weight: 200;
+  margin-bottom: 1rem;
 }
 
 h3, .h3 {
   font-family: var(--font-open-sans);
   font-size: 1.6rem;
   font-weight: 200;
+  margin-bottom: 1rem;
 }
 
 h4, .h4 {
   font-family: var(--font-open-sans);
   font-size: 1.4rem;
   font-weight: 200;
+  margin-bottom: 1rem;
 }
 
 h5, .h5 {
   font-family: var(--font-open-sans);
   font-size: 1.2rem;
   font-weight: 200;
+  margin-bottom: .5rem;
 }
 
 h6, .h6 {
   font-family: var(--font-open-sans);
   font-size: 1rem;
   font-weight: 200;
+  margin-bottom: .5rem;
 }
 
 ul {

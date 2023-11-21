@@ -22,7 +22,7 @@ export default function CatCard({ cat } : { cat: Cat }) {
   return (
     <Link href={`cat/${cat.id}`}>
       <div className="drop-shadow-xl bg-white max-w-md">
-        <div className="flex h-32 px-3 py-2">
+        <div className="flex h-46 px-3 py-2">
           <div>
             <h2>{cat.name}</h2>
             { Birthday(cat.birthday) }

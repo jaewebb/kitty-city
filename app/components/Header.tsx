@@ -5,7 +5,7 @@ export default function Header() {
     <header className="flex px-5 bg-white drop-shadow">
       <div className="logo-font self-center">
         <i className="fa-solid fa-building mr-2" />
-        Kitty City
+        <Link href="/">Kitty City</Link>
         <i className="fa-regular fa-building ml-1" />
       </div>
       <nav className="ml-auto self-center">

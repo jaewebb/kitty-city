@@ -15,13 +15,36 @@ export default function Favorites() {
         </a>
       </div>
       <div>
-        <h3 className="h5">To do:</h3>
+        <h3 className="h5 mt-1">To do:</h3>
         <ul>
-          <li><i className="fa-solid fa-cat ml-1" /> Add mobile menu</li>
-          <li><i className="fa-solid fa-cat ml-1" /> OAuth login</li>
-          <li><i className="fa-solid fa-cat ml-1" /> Add/edit/delete cats</li>
-          <li><i className="fa-solid fa-cat ml-1" /> Favorite functionality</li>
-          <li><i className="fa-solid fa-cat ml-1" /> I18n</li>
+          <li>
+            <i className="fa-solid fa-cat mr-1" />
+            Add filters (age, gender, etc)
+          </li>
+          <li>
+            <i className="fa-solid fa-cat mr-1" />
+            Implement site design, so it looks nice
+          </li>
+          <li>
+            <i className="fa-solid fa-cat mr-1" />
+            Add mobile menu
+          </li>
+          <li>
+            <i className="fa-solid fa-cat mr-1" />
+            OAuth login
+          </li>
+          <li>
+            <i className="fa-solid fa-cat mr-1" />
+            Add/edit/delete cats
+          </li>
+          <li>
+            <i className="fa-solid fa-cat mr-1" />
+            Favorite functionality
+          </li>
+          <li>
+            <i className="fa-solid fa-cat mr-1" />
+            I18n
+          </li>
         </ul>
       </div>
     </main>
