@@ -14,8 +14,12 @@ export default function Favorites() {
           profile site!
         </a>
       </div>
+      <div className="mt-5 mb-7">
+        <h2>Stack:</h2>
+        <p>React, Next.js, Vercel, SWR, Prisma, Tailwind, Postgres</p>
+      </div>
       <div>
-        <h3 className="h5 mt-1">To do:</h3>
+        <h3 className="h5">To do:</h3>
         <ul>
           <li>
             <i className="fa-solid fa-cat mr-1" />

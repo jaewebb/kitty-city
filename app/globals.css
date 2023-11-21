@@ -34,28 +34,28 @@ h1, .h1 {
   font-family: var(--font-open-sans);
   font-size: 2rem;
   font-weight: 200;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 }
 
 h2, .h2 {
   font-family: var(--font-open-sans);
   font-size: 1.8rem;
   font-weight: 200;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 }
 
 h3, .h3 {
   font-family: var(--font-open-sans);
   font-size: 1.6rem;
   font-weight: 200;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 }
 
 h4, .h4 {
   font-family: var(--font-open-sans);
   font-size: 1.4rem;
   font-weight: 200;
-  margin-bottom: 1rem;
+  margin-bottom: .5rem;
 }
 
 h5, .h5 {
