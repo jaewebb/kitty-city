@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -18,31 +19,45 @@ function Birthday(birthday: Date) {
   return <h4>{diff} old</h4>;
 }
 
-export default function CatCard({ cat } : { cat: Cat }) {
+function Photo(cat: Cat) {
   return (
-    <Link href={`cat/${cat.id}`}>
-      <div className="drop-shadow-xl bg-white max-w-md">
-        <div className="flex h-46 px-3 py-2">
-          <div>
-            <h2>{cat.name}</h2>
-            { Birthday(cat.birthday) }
-            <h4>{cat.gender}</h4>
-          </div>
-          <div className="grow text-right">
-            { Favorite(cat.name == 'Pumpkin') }
-          </div>
-        </div>
-        <div className="w-100 h-80 relative">
-          <Image
-            priority
-            alt={`photo of ${cat.name}`}
-            className="mx-auto"
-            fill={true}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            src={`/images/${cat.img}`}
-          />
-        </div>
+    <Image
+      priority
+      alt={`photo of ${cat.name}`}
+      className='rounded-lg'
+      height='500'
+      width='500'
+      src={`/images/${cat.img}`}
+    />
+  );
+}
+
+function Profile(cat: Cat) {
+  return (
+    <div className="flex px-3 py-2">
+      <div>
+        <h2>{cat.name}</h2>
+        { Birthday(cat.birthday) }
+        <h4>{cat.gender}</h4>
       </div>
+      <div className="grow text-right">
+        { Favorite(cat.name == 'Pumpkin') }
+      </div>
+    </div>
+  );
+}
+
+export default function CatCard({ cat } : { cat: Cat }) {
+  const [hover, setHover] = useState(false);
+
+  return (
+    <Link
+      href={`cat/${cat.id}`}
+      className="drop-shadow-xl bg-white rounded-lg border border-orange-500 h-full fade fade-in"
+        onMouseOver={() => setHover(true)}
+        onMouseOut={() => setHover(false)}
+    >
+      { hover == true ? Profile(cat) : Photo(cat) }
     </Link>
   );
 }

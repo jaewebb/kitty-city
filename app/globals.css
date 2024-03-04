@@ -81,3 +81,30 @@ ul {
   font-size: 3rem;
   color: theme('colors.orange.600')
 }
+
+.fade-in {
+	opacity: 1;
+	animation-name: opacityFade;
+	animation-iteration-count: 1;
+	animation-timing-function: ease-in;
+	animation-duration: 0.5s;
+}
+
+@keyframes opacityFade {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.fade {
+  opacity: 1.0;
+  transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+}
+
+.fade:hover {
+  opacity: 0.7;
+  transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -webkit-transition: opacity .5s ease-in-out;
+}

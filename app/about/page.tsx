@@ -35,10 +35,6 @@ export default function Favorites() {
           </li>
           <li>
             <i className="fa-solid fa-cat mr-1" />
-            OAuth login
-          </li>
-          <li>
-            <i className="fa-solid fa-cat mr-1" />
             Add/edit/delete cats
           </li>
           <li>

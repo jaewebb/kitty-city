@@ -11,7 +11,7 @@ const fetcher = (url: string) => fetch(url).then(res => res.json());
 
 function Birthday(birthday: Date) {
   let diff = formatDistanceToNow(parseISO(birthday.toString()));
-  return <h3>{diff} old</h3>;
+  return <>{diff} old</>;
 }
 
 export default function Page({ params }: { params: { id: string } }) {
@@ -29,14 +29,13 @@ export default function Page({ params }: { params: { id: string } }) {
   );
 
   return (
-    <main className="min-h-screen m-10">
+    <main className="min-h-screen m-10 fade-in">
       <Link href="/">
         <i className="fa-solid fa-arrow-left"></i> Back to cats
       </Link>
       <h1 className="mt-5">{ data.cat?.name }</h1>
-      <h2>{ data.cat?.gender }</h2>
-      { Birthday(data.cat?.birthday) }
-      <p>{ data.cat?.description }</p>
+      <h2>{ data.cat?.gender }, { Birthday(data.cat?.birthday) }</h2>
+      <p className='py-1'>{ data.cat?.description }</p>
       <Image
         priority
         alt={`photo of ${data.cat.name}`}
