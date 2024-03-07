@@ -10,9 +10,3 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ error }, { status: 500 });
   }
 }
-
-// // To handle a POST request to /api
-// export async function POST(request) {
-//   // Do whatever you want
-//   return NextResponse.json({ data: cats }, { status: 200 });
-// }
