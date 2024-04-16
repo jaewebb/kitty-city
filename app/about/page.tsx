@@ -2,19 +2,23 @@ export default function Favorites() {
   return (
     <main className="min-h-screen m-10">
       <h1>About</h1>
-      <div>
-        This is a work in progress demo site, these cats are fictional
-      </div>
-      <div className="py-2">
-        I&apos;m going to add more features. In the meantime, check out my
+      <p>
+        This is a work in progress demo site, these cats are fictional.
+      </p>
+      <p>
+        I usually spend a lot of time on the front end
+        but for this project I focused more on the rest so I could learn a new tech stack.
+      </p>
+      <p>
+        I plan to add more features, in the meantime check out my
         <a
           href="https://www.webbdevdesign.ca"
           className="ml-1 underline"
         >
           profile site!
-        </a>
-      </div>
-      <div className="mt-5 mb-7">
+        </a> I have both a vue and a react version.
+      </p>
+      <div className="my-10">
         <h2>Stack:</h2>
         <p>React, Next.js, Vercel, SWR, Prisma, Tailwind, Postgres</p>
       </div>
