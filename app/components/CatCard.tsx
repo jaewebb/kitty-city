@@ -24,9 +24,9 @@ function Photo(cat: Cat) {
     <Image
       priority
       alt={`photo of ${cat.name}`}
-      className='rounded-lg'
-      height='500'
-      width='500'
+      className='rounded-lg drop-shadow-xl border border-orange-500'
+      height='320'
+      width='320'
       src={`/images/${cat.img}`}
     />
   );
@@ -34,7 +34,12 @@ function Photo(cat: Cat) {
 
 function Profile(cat: Cat) {
   return (
-    <div className="flex px-3 py-2">
+    <div
+      className="
+        flex px-3 py-2 w-80 h-80
+        drop-shadow-xl bg-white rounded-lg
+        border border-orange-500"
+    >
       <div>
         <h2>{cat.name}</h2>
         { Birthday(cat.birthday) }
@@ -53,7 +58,7 @@ export default function CatCard({ cat } : { cat: Cat }) {
   return (
     <Link
       href={`cat/${cat.id}`}
-      className="drop-shadow-xl bg-white rounded-lg border border-orange-500 h-full fade fade-in"
+      className="fade fade-in w-80 h-80"
         onMouseOver={() => setHover(true)}
         onMouseOut={() => setHover(false)}
     >
