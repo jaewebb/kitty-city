@@ -22,8 +22,8 @@ export default function Cats() {
       <h1>Adopt a Cat</h1>
       <div className="
         grid
-        xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1
-        xl:gap-7 gap-5
+        2xl:grid-cols-4 xl:grid-cols-3 md:grid-cols-2 grid-cols-1
+        gap-20
       ">
           { data.cats.map((cat: Cat, i: number) => (
             <CatCard key={i} cat={cat} />
